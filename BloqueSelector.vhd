@@ -10,7 +10,7 @@ entity BloqueSelector is
         Switch        : in STD_LOGIC_VECTOR(2 downto 0);
         BotonAuto     : in STD_LOGIC;
         BotonRegistro : in STD_LOGIC;
-        Registro      : in STD_LOGIC_VECTOR(11 downto 0);
+        Registro      : in STD_LOGIC_VECTOR(23 downto 0);
         D_T           : out STD_LOGIC_VECTOR(3 downto 0);
         U_T           : out STD_LOGIC_VECTOR(3 downto 0);
         D_H           : out STD_LOGIC_VECTOR(3 downto 0);
@@ -44,12 +44,12 @@ begin
                     U_CO2 <= (others => '0');
             end case;
         elsif BotonAuto = '0' and BotonRegistro = '1' then
-            D_T <= Registro(11 downto 8);
-            U_T <= Registro(7 downto 4);
-            D_H <= Registro(11 downto 8);
-            U_H <= Registro(7 downto 4);
-            D_CO2 <= Registro(11 downto 8);
-            U_CO2 <= Registro(7 downto 4);
+            D_T <= Registro(23 downto 20);
+            U_T <= Registro(19 downto 16);
+            D_H <= Registro(15 downto 12);
+            U_H <= Registro(11 downto 8);
+            D_CO2 <= Registro(7 downto 4);
+            U_CO2 <= Registro(3 downto 0);
         else
             case Switch is
                 when "100" =>
