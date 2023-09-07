@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 --Entity
 entity MSS is
 	port(
-		start, resetn, clk, x, tecla, switch, BotonRegistro,tiempo_final, T1, T4, TC1, TC2, CC1, CC2, air_off, cal_on, cal_off, HC1, faldas_fro_pos, roci_off: in std_logic;
+		start, resetn, clk, x, tecla, BotonRegistro,tiempo_final, TC1, TC2, CC1, CC2, air_off, cal_on, cal_off, HC1, faldas_fro_pos, roci_off: in std_logic;
 		En_D, En_U, leer_registro, En_Ram, W_R, En_T2, En_CO2, En_H, Ld3, Ld4, Ld2, En_T1, Ld1: out std_logic);
 end MSS;
 
